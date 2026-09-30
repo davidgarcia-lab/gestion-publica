@@ -1,0 +1,199 @@
+/* Cargar después de clase.css. Barra y resultado para la paleta cobre/marfil. */
+.practica {
+  --pr-verde: var(--cobre-oscuro, #8e5b3a);
+  --pr-oscuro: var(--carbon, #342f30);
+  --pr-borde: var(--borde, #e4dedb);
+  --pr-suave: var(--suave, #71696a);
+  --pr-blanco: var(--blanco, #fff);
+}
+
+/* Sustituye el antiguo <style> incluido en cada clase. */
+.practica .actividad {
+  margin: 0;
+  padding: 30px;
+  border: 1px solid var(--pr-borde);
+  border-radius: 12px;
+  background: var(--pr-blanco);
+}
+.practica .actividad-tipo {
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-weight: 800;
+}
+.practica .actividad textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: .5rem;
+}
+.practica .cuestionario fieldset[data-respuesta] {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--pr-borde);
+  border-radius: 8px;
+  background: #fff;
+  scroll-margin-top: 105px;
+}
+.practica .cuestionario legend {
+  margin-bottom: 9px;
+  padding: 0 .4rem;
+  font-weight: 800;
+}
+.practica .cuestionario label { cursor: pointer; }
+
+.practica .practica-avance {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 76px;
+  margin: 0 0 18px;
+  padding: 14px 19px;
+  background: linear-gradient(110deg, #fff 55%, #faf3ee 100%);
+  border: 1px solid var(--pr-borde);
+  border-radius: 10px;
+  box-shadow: 0 7px 22px rgba(52, 47, 48, .10);
+}
+
+.practica .practica-avance__titulo {
+  flex: none;
+  color: var(--pr-oscuro);
+  font-size: .92rem;
+  font-weight: 800;
+}
+
+.practica .practica-avance__pista,
+.practica .practica-resultado__pista {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #eee6e0;
+}
+
+.practica .practica-avance__pista { flex: 1; height: 12px; }
+.practica .practica-avance__relleno,
+.practica .practica-resultado__relleno {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--pr-verde);
+  transition: width .25s ease;
+}
+
+.practica .practica-avance__dato {
+  flex: none;
+  padding: 9px 14px;
+  color: var(--pr-oscuro);
+  border-radius: 9px;
+  background: #f3e7dd;
+  font-size: .84rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.practica .cuestionario .quiz-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.practica .cuestionario .quiz-acciones button {
+  margin: 0;
+  padding: 11px 16px;
+  color: #fff;
+  border: 1px solid var(--pr-verde);
+  border-radius: 8px;
+  background: var(--pr-verde);
+  font-size: .79rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.practica .cuestionario .quiz-acciones button:hover { background: var(--pr-oscuro); }
+.practica .cuestionario .quiz-acciones button[type="button"] {
+  color: var(--pr-oscuro);
+  border-color: var(--pr-borde);
+  background: #fff;
+}
+.practica .cuestionario .quiz-acciones button[type="button"]:hover { background: #f3e7dd; }
+.practica .cuestionario .quiz-acciones button:focus-visible,
+.practica .cuestionario input:focus-visible { outline: 3px solid #b3774f; outline-offset: 3px; }
+
+.practica .cuestionario .practica-resultado {
+  margin-top: 17px;
+  padding: 20px 23px;
+  border: 1px solid var(--pr-borde);
+  border-radius: 12px;
+  background: #f7f1ed;
+}
+.practica .practica-resultado__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.practica .practica-resultado__rotulo {
+  display: block;
+  color: var(--pr-verde);
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.practica .practica-resultado__titulo {
+  display: block;
+  margin-top: 3px;
+  color: var(--pr-oscuro);
+  font-size: 1rem;
+  font-weight: 800;
+}
+.practica .practica-resultado__nota {
+  color: var(--pr-verde);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+.practica .practica-resultado__nota small {
+  color: var(--pr-suave);
+  font-size: .9rem;
+  font-weight: 500;
+}
+.practica .practica-resultado__pista { margin-top: 17px; }
+.practica .cuestionario .practica-resultado #quiz-resultado {
+  margin: 11px 0 0;
+  padding: 0;
+  color: var(--pr-suave);
+  background: transparent;
+  border: 0;
+  font-size: .76rem;
+  font-weight: 500;
+}
+.practica .cuestionario fieldset.correcta { border-color: #acd0be; background: #fafdfa; }
+.practica .cuestionario fieldset.incorrecta { border-color: #e3b7b3; background: #fffbfb; }
+.practica .cuestionario fieldset.sin-respuesta { border-color: #b3774f; }
+.practica .cuestionario label.respuesta-correcta {
+  color: #355e4b;
+  border-color: #acd0be;
+  background: #eaf5ef;
+}
+.practica .cuestionario label.respuesta-incorrecta {
+  color: #843f3a;
+  border-color: #e3b7b3;
+  background: #faeceb;
+}
+@media (max-width: 580px) {
+  .practica .actividad { padding: 24px 19px; }
+  .practica .practica-avance { flex-wrap: wrap; gap: 9px 12px; padding: 12px 14px; }
+  .practica .practica-avance__titulo { flex: 1; }
+  .practica .practica-avance__pista { order: 3; flex-basis: 100%; }
+  .practica .cuestionario .quiz-acciones { flex-direction: row; align-items: stretch; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .practica .practica-avance__relleno,
+  .practica .practica-resultado__relleno { transition: none; }
+}

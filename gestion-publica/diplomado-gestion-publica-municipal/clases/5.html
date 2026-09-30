@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/clase.css">
+    <link rel="stylesheet" href="../../../css/practica-gestion.css">
 </head>
 
 <body>
@@ -107,7 +108,7 @@
                         </header>
 
                         <!-- AQUÍ: link spoty -->
-
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/72vJB2tcwPakhsVYZ1ACdb?utm_source=generator&si=7889ac96aca7491a" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         <!-- AQUÍ: la lectura -->
                         <p>Una municipalidad tiene una infraestructura pública funcionando, pero uno de sus componentes ya no sirve. Primera reacción del genio de turno: <em>“Hagamos un proyecto nuevo”</em>. Claro, porque si una ventana se rompe, lo lógico sería demoler la casa completa y empezar otra. Esa mentalidad de <strong>“todo es proyecto”</strong> es justamente una de las huevadas que tienes que sacarte de la cabeza. Dentro del sistema de inversiones existen proyectos de inversión pública, sí, pero también existen <strong>inversiones que no son proyectos</strong>. Y esas son las <strong>IOARR</strong>.</p>
 
@@ -350,163 +351,7 @@
                         </form>
                     </article>
 
-                    <style>
-                        .actividad {
-                            margin: 2rem 0;
-                            padding: 1.5rem;
-                            border: 1px solid #dcdcdc;
-                            border-radius: 12px;
-                            background: #fff;
-                        }
-
-                        .actividad-tipo {
-                            display: inline-block;
-                            margin-bottom: .5rem;
-                            font-size: .9rem;
-                            font-weight: 700;
-                            color: #555;
-                        }
-
-                        .actividad textarea {
-                            width: 100%;
-                            box-sizing: border-box;
-                            margin-top: .5rem;
-                            padding: .75rem;
-                        }
-
-                        .cuestionario fieldset {
-                            margin: 1rem 0;
-                            padding: 1rem;
-                            border: 1px solid #ddd;
-                            border-radius: 8px;
-                        }
-
-                        .cuestionario legend {
-                            padding: 0 .4rem;
-                            font-weight: 700;
-                        }
-
-                        .cuestionario label {
-                            display: block;
-                            margin: .6rem 0;
-                            cursor: pointer;
-                        }
-
-                        .quiz-acciones {
-                            margin-top: 1.5rem;
-                        }
-
-                        .quiz-acciones button {
-                            margin-right: .5rem;
-                            margin-bottom: .5rem;
-                            padding: .7rem 1rem;
-                            cursor: pointer;
-                        }
-
-                        #quiz-resultado {
-                            margin-top: 1rem;
-                            padding: 1rem;
-                            font-weight: 700;
-                            border-radius: 8px;
-                        }
-
-                        fieldset.correcta {
-                            border: 2px solid #2e7d32;
-                            background: #f1f8f2;
-                        }
-
-                        fieldset.incorrecta {
-                            border: 2px solid #c62828;
-                            background: #fff5f5;
-                        }
-                    </style>
-
-                    <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const quizForm = document.getElementById("quiz-form");
-                        const resultado = document.getElementById("quiz-resultado");
-                        const botonReiniciar = document.getElementById("quiz-reiniciar");
-
-                        quizForm.addEventListener("submit", function (event) {
-                            event.preventDefault();
-
-                            const preguntas = quizForm.querySelectorAll("fieldset[data-respuesta]");
-                            let correctas = 0;
-                            let respondidas = 0;
-
-                            preguntas.forEach(function (pregunta) {
-                                const respuestaCorrecta = pregunta.dataset.respuesta;
-                                const seleccionada = pregunta.querySelector(
-                                    "input[type='radio']:checked"
-                                );
-
-                                pregunta.classList.remove("correcta", "incorrecta");
-
-                                if (seleccionada) {
-                                    respondidas++;
-
-                                    if (seleccionada.value === respuestaCorrecta) {
-                                        correctas++;
-                                        pregunta.classList.add("correcta");
-                                    } else {
-                                        pregunta.classList.add("incorrecta");
-                                    }
-                                } else {
-                                    pregunta.classList.add("incorrecta");
-                                }
-                            });
-
-                            const total = preguntas.length;
-                            const porcentaje = Math.round((correctas / total) * 100);
-
-                            let mensaje = "";
-
-                            if (respondidas < total) {
-                                mensaje +=
-                                    "Has respondido " +
-                                    respondidas +
-                                    " de " +
-                                    total +
-                                    " preguntas. ";
-                            }
-
-                            mensaje +=
-                                "Resultado: " +
-                                correctas +
-                                " de " +
-                                total +
-                                " respuestas correctas (" +
-                                porcentaje +
-                                "%). ";
-
-                            if (porcentaje === 100) {
-                                mensaje +=
-                                    "Excelente. Dominas los conceptos principales de la clase.";
-                            } else if (porcentaje >= 80) {
-                                mensaje +=
-                                    "Muy buen resultado. Tienes una comprensión sólida del tema.";
-                            } else if (porcentaje >= 60) {
-                                mensaje +=
-                                    "Buen avance. Conviene revisar los conceptos en los que tuviste errores.";
-                            } else {
-                                mensaje +=
-                                    "Te recomendamos repasar la lectura y volver a intentar el cuestionario.";
-                            }
-
-                            resultado.textContent = mensaje;
-                        });
-
-                        botonReiniciar.addEventListener("click", function () {
-                            quizForm.reset();
-
-                            quizForm.querySelectorAll("fieldset").forEach(function (pregunta) {
-                                pregunta.classList.remove("correcta", "incorrecta");
-                            });
-
-                            resultado.textContent = "";
-                        });
-                    });
-                    </script>
+                    
 
 
 
@@ -526,6 +371,6 @@
     </footer>
 
     <script src="../../../js/transcripcion.js"></script>
-    <script src="../../../js/clase.js"></script>
+    <script src="../../../js/practica-gestion.js"></script>
 </body>
 </html>
