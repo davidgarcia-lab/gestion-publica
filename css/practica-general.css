@@ -1,4 +1,4 @@
-/* Cargar después de clase.css. Barra y resultado para la paleta cobre/marfil. */
+/* Cargar después de clase.css. La barra se mantiene dentro del cuestionario. */
 .practica {
   --pr-verde: var(--cobre-oscuro, #8e5b3a);
   --pr-oscuro: var(--carbon, #342f30);
@@ -50,10 +50,10 @@
   min-height: 76px;
   margin: 0 0 18px;
   padding: 14px 19px;
-  background: linear-gradient(110deg, #fff 55%, #faf3ee 100%);
+  background: linear-gradient(110deg, #fff 55%, #faf8f6 100%);
   border: 1px solid var(--pr-borde);
   border-radius: 10px;
-  box-shadow: 0 7px 22px rgba(52, 47, 48, .10);
+  box-shadow: 0 7px 22px rgba(52, 47, 48, .11);
 }
 
 .practica .practica-avance__titulo {
@@ -68,7 +68,7 @@
   height: 9px;
   overflow: hidden;
   border-radius: 99px;
-  background: #eee6e0;
+  background: #e4dedb;
 }
 
 .practica .practica-avance__pista { flex: 1; height: 12px; }
@@ -128,7 +128,7 @@
   padding: 20px 23px;
   border: 1px solid var(--pr-borde);
   border-radius: 12px;
-  background: #f7f1ed;
+  background: #f4efec;
 }
 .practica .practica-resultado__cabecera {
   display: flex;
@@ -173,8 +173,8 @@
   font-size: .76rem;
   font-weight: 500;
 }
-.practica .cuestionario fieldset.correcta { border-color: #acd0be; background: #fafdfa; }
-.practica .cuestionario fieldset.incorrecta { border-color: #e3b7b3; background: #fffbfb; }
+.practica .cuestionario fieldset.correcta { border-color: #acd0be; background: #eaf5ef; }
+.practica .cuestionario fieldset.incorrecta { border-color: #e3b7b3; background: #faeceb; }
 .practica .cuestionario fieldset.sin-respuesta { border-color: #b3774f; }
 .practica .cuestionario label.respuesta-correcta {
   color: #355e4b;

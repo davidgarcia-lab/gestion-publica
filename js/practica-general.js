@@ -1,4 +1,4 @@
-/* Gestión Pública: un fieldset[data-respuesta] equivale a una pregunta. */
+/* Todas las clases: un fieldset[data-respuesta] equivale a una pregunta. */
 (() => {
   "use strict";
 
