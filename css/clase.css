@@ -122,3 +122,216 @@ button, textarea, input { font: inherit; }
     .practica { padding-block: 42px; }
     .actividad { padding: 24px 20px; }
 }
+
+
+
+
+
+/* NAVEGACIÓN MINIMALISTA DE CLASES */
+
+
+/* =====================================
+   NAVEGACIÓN DE CLASES
+===================================== */
+
+.navegacion-clases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.nav-clase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 13px 20px;
+  border: 1px solid var(--borde);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--carbon-2);
+  font-size: .86rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: background .2s ease,
+              border-color .2s ease,
+              color .2s ease;
+}
+
+/* Anterior */
+
+
+/* =====================================
+   NAVEGACIÓN - EFECTO HOVER
+===================================== */
+
+
+/* ========================================
+   NAVEGACIÓN ADAPTABLE ENTRE CLASES
+======================================== */
+
+.navegacion-clases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Si existe un solo botón, ocupa todo el ancho */
+.navegacion-clases > .nav-clase:only-child {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+/* Mantener apariencia uniforme */
+.navegacion-clases > .nav-clase {
+  width: 100%;
+  margin: 0;
+  min-height: 52px;
+  text-align: center;
+}
+
+/* Hover: mismo color de Comprobar respuestas */
+.navegacion-clases > .nav-clase:hover {
+  background: var(--carbon) !important;
+  border-color: var(--carbon) !important;
+  color: #fff !important;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Móvil */
+@media (max-width: 580px) {
+  .navegacion-clases {
+    gap: 10px;
+  }
+
+  .navegacion-clases > .nav-clase {
+    min-height: 48px;
+  }
+}
+
+
+
+
+/* ==========================================
+   NAVEGACIÓN DE CLASES - DISEÑO INTEGRADO
+========================================== */
+
+.cuestionario .navegacion-clases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin: 24px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--borde);
+}
+
+/* Botones */
+.cuestionario .navegacion-clases .nav-clase {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  min-height: 46px;
+  margin: 0;
+  padding: 12px 14px;
+
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--blanco);
+
+  color: var(--carbon);
+  font-family: inherit;
+  font-size: .79rem;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+
+  transform: none;
+  box-shadow: none;
+
+  transition:
+    background-color .2s ease,
+    border-color .2s ease,
+    color .2s ease;
+}
+
+/* Anterior */
+.cuestionario .nav-clase.anterior {
+  background: #fff;
+  border-color: var(--borde);
+  color: var(--carbon);
+}
+
+/* Siguiente */
+.cuestionario .nav-clase.siguiente {
+  background: #f4efec;
+  border-color: var(--borde);
+  color: var(--cobre-oscuro);
+}
+
+/* Hover */
+.cuestionario .nav-clase.anterior:hover,
+.cuestionario .nav-clase.siguiente:hover {
+  background: var(--carbon);
+  border-color: var(--carbon);
+  color: #fff;
+}
+
+/* Solo un botón: tamaño proporcionado */
+.cuestionario .navegacion-clases:has(> .nav-clase:only-child) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.cuestionario .navegacion-clases > .nav-clase:only-child {
+  grid-column: 1;
+}
+
+/* Tablet y móvil */
+@media (max-width: 580px) {
+  .cuestionario .navegacion-clases {
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 18px;
+  }
+
+  .cuestionario .nav-clase {
+    min-height: 44px;
+    padding: 10px 8px;
+    font-size: .75rem;
+  }
+}
+
+
+
+/* =====================================
+   NAVEGACIÓN CON UN SOLO BOTÓN
+===================================== */
+
+/* Solo siguiente clase: columna derecha */
+.cuestionario .navegacion-clases
+> .nav-clase.siguiente:only-child {
+  grid-column: 2;
+}
+
+/* Solo anterior clase: columna izquierda */
+.cuestionario .navegacion-clases
+> .nav-clase.anterior:only-child {
+  grid-column: 1;
+}
+
+/* Ambos botones conservan su posición */
+.cuestionario .navegacion-clases
+> .nav-clase:not(:only-child) {
+  grid-column: auto;
+}
