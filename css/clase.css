@@ -379,3 +379,128 @@ button, textarea, input { font: inherit; }
         box-shadow: none;
     }
 }
+
+
+
+/* ==========================================
+   BARRA FLOTANTE DE NAVEGACIÓN ENTRE CLASES
+========================================== */
+
+.barra-clases {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: max-content;
+    max-width: calc(100% - 24px);
+    padding: 6px;
+
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #eceef1;
+    border-radius: 100px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* ESTILO GENERAL */
+
+.barra-clases a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 43px;
+    padding: 0 17px;
+
+    border-radius: 100px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: background .2s ease,
+                box-shadow .2s ease,
+                transform .2s ease;
+}
+
+.barra-clases a span {
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* VOLVER AL CURSO */
+
+.barra-volver {
+    color: #555d6a;
+    background: transparent;
+}
+
+.barra-volver:hover {
+    background: #f4f5f7;
+}
+
+/* ANTERIOR */
+
+.barra-anterior {
+    color: #30343c;
+    background: #f0f1f4;
+}
+
+.barra-anterior:hover {
+    background: #e3e5e9;
+}
+
+/* SIGUIENTE */
+
+.barra-siguiente {
+    color: #ffffff !important;
+    background: #c44036;
+    box-shadow: 0 4px 10px rgba(196,64,54,.25);
+}
+
+.barra-siguiente:hover {
+    background: #a9322a;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(196,64,54,.30);
+}
+
+/* EVITAR QUE LA BARRA TAPE EL FINAL */
+
+body {
+    padding-bottom: 85px;
+}
+
+/* ADAPTACIÓN MÓVIL */
+
+@media (max-width: 580px) {
+
+    .barra-clases {
+        bottom: 12px;
+        gap: 4px;
+        padding: 5px;
+    }
+
+    .barra-clases a {
+        min-height: 40px;
+        padding: 0 10px;
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .barra-clases a span {
+        font-size: 17px;
+    }
+
+}
