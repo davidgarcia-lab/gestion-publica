@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revisa el Formato S100 como puerta de entrada a la clasificación y distingue la primera solicitud, la reevaluación y la actualización de datos del hogar.">
+    <title>Clase 05 | OFIS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/clase.css">
+    <link rel="stylesheet" href="../../../../css/practica-general.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="contenedor navegacion">
+            <a class="marca" href="../../../../index.html">Gestión Pública</a>
+            <nav>
+                <a href="../../pension-65.html#curso-ofis">Plan de estudios</a>
+                <a class="inicio" href="../../../../index.html">Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="encabezado-clase">
+            <div class="contenedor">
+                <p class="ruta">Pensión 65 <span>/</span> OFIS <span>/</span> Clase 05</p>
+                <div class="encabezado-grid">
+                    <div>
+                        <h1>Desnudando el Formato S100: Requisitos, mitos y la anatomía de la solicitud</h1>
+                        <p class="resumen">Revisa el Formato S100 como puerta de entrada a la clasificación y distingue la primera solicitud, la reevaluación y la actualización de datos del hogar.</p>
+                    </div>
+                    <a class="enlace-spotify" href="https://open.spotify.com/show/7G82hBMTKbiyPfySKntdIv?si=RSNzB2jdSIaJFllykC87CQ" target="_blank" rel="noopener noreferrer">
+                        <span>▶</span> Escuchar en Spotify
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="estudio">
+            <div class="contenedor estudio-grid">
+                <aside class="lateral">
+                    <section class="ideas-clave">
+                        <span class="rotulo">Ideas clave</span>
+                        <ul>
+                            <li>El S100 registra al solicitante, a los integrantes y la ubicación del hogar.</li>
+                            <li>El código de suministro vincula la vivienda con información de referencia cuando hay electricidad.</li>
+                            <li>La modalidad depende del historial de la CSE y de los cambios del hogar.</li>
+                        </ul>
+                    </section>
+                    <nav class="indice" aria-label="Contenido de la clase">
+                        <span>Contenido</span>
+                        <a href="#objetivos">Objetivos</a>
+                        <a href="#lectura">Lectura</a>
+                        <a href="#practica">Práctica</a>
+                    </nav>
+                </aside>
+
+                <article class="articulo">
+                    <section class="objetivos" id="objetivos">
+                        <span class="rotulo">Al terminar esta clase podrás</span>
+                        <ul>
+                            <li>Determinar qué modalidad corresponde a cada situación.</li>
+                            <li>Revisar la información necesaria para ubicar el hogar.</li>
+                            <li>Explicar la diferencia entre solicitud y clasificación.</li>
+                        </ul>
+                    </section>
+                    <div class="texto-transcripcion lectura" id="lectura">
+                        <header class="lectura-titulo">
+                            <span class="rotulo">Lectura principal</span>
+                            <p>Datos del hogar, modalidades de solicitud y trazabilidad del trámite.</p>
+                        </header>
+
+                        <p>¡Arrancamos el Episodio 5, carajo! Si en los episodios anteriores dejamos en claro cómo funciona la arquitectura del SINAFO, el OFIS y el ciclo de vida de la focalización, hoy venimos a agarrar con las manos en la masa al documento que lo inicia todo: el Formato S100. La famosa Solicitud de Clasificación Socioeconómica. ¡Ese papelito que en las municipalidades tratan como si fuera un volante sin valor o, peor aún, como una mercancía para cobrar favores! Hoy venimos a desnudarlo de arriba a abajo. Yo soy Carlos.</p>
+                        <p>Y yo soy Renzo. Y la verdad, señores, es una TOTAL BRUTALIDAD la cantidad de basura, desinformación y mitos urbanos que giran en torno al Formato S100. Vas a una Unidad Local de Empadronamiento (ULE) en cualquier provincia del Perú y ves a la gente haciendo filas desde las 4 de la mañana porque un tramitador delincuente o un empleado municipal incompetente les dijo que el S100 es un bono, o que se vence en 24 horas, o que si no le pagan 20 soles al empadronador no entran al sistema. ¡Eso se llama corrupción e ignorancia, y hoy lo vamos a despedazar punto por punto!</p>
+                        <p>¡Totalmente, Renzo! Vamos a empezar por el principio: ¿Qué mierda es jurídicamente el Formato S100? El Formato S100 es el instrumento oficial mediante el cual el representante de un hogar solicita formalmente ante la ULE de su municipalidad el inicio del trámite de Clasificación Socioeconómica (CSE), su reevaluación por vencimiento o la actualización de los datos de su hogar. No es un formulario cualquiera; ¡es una Declaración Jurada con valor legal absoluto!</p>
+                        <p>¡Atención a esa palabra: Declaración Jurada! Cuando el ciudadano firma o pone su huella dactilar en el Formato S100, no está llenando una encuesta de opinión pública; está declarando bajo responsabilidad penal que la información sobre los integrantes de su hogar y su residencia es rigurosamente cierta. Y además, autoriza expresamente al Ente Rector, el OFIS, a realizar el cruce masivo interinstitucional de sus datos con la RENIEC, la SUNAT, la SBS, la SUNARP, EsSalud y todas las bases de datos públicas y privadas del Estado.</p>
+                        <p>¡Exacto! Vamos a desmenuzar la <strong>anatomía del Formato S100</strong> sección por sección para que nadie los engañe:</p>
+                        <ol>
+                            <li><strong>Datos del Solicitante o Informante Calificado:</strong> Aquí no puede ir el vecino, ni el compadre, ni el dirigente de la directiva comunal que quiere cobrar por el trámite. El solicitante tiene que ser un integrante mayor de edad del hogar, debidamente identificado con su DNI o documento de identidad oficial. En casos excepcionales de dependencia o incapacidad, aplica la figura del informante calificado con la acreditación correspondiente.</li>
+                            <li><strong>Identificación de los Integrantes del Hogar:</strong> Se registra a todas y cada una de las personas que residen habitualmente en la vivienda y comparten el mismo presupuesto de alimentación. Se consigna el tipo y número de documento de identidad (DNI, Carné de Extranjería o Cédula de Identidad para ciudadanos extranjeros regularizados), nombres completos, fechas de nacimiento y el parentesco con el jefe de hogar.</li>
+                            <li><strong>Ubicación de la Vivienda y Referencias:</strong> Dirección exacta, manzana, lote, centro poblado, distrito y un punto de referencia claro. Si el hogar cuenta con servicio de energía eléctrica, es <strong>obligatorio</strong> presentar el recibo de luz para consignar el código de suministro eléctrico. ¿Por qué? Porque el código de suministro es la clave cartográfica con la que el sistema georeferencia el consumo del hogar en el cruce de datos.</li>
+                            <li><strong>Firma y Aceptación de Términos:</strong> La firma o huella del solicitante y la firma y sello del Responsable o Empadronador de la ULE que recibe el trámite.</li>
+                        </ol>
+                        <p>¡Mucha atención a las tres modalidades de solicitud que se tramitan con el Formato S100, carajo!</p>
+                        <ul>
+                            <li><strong>Solicitud de CSE por primera vez:</strong> Para aquellos hogares que nunca han sido empadronados en el SISFOH/OFIS o que acaban de constituirse como un nuevo hogar independiente.</li>
+                            <li><strong>Solicitud de Reevaluación:</strong> Cuando la Clasificación Socioeconómica del hogar está por vencer o ya venció (recuerden que la CSE tiene una vigencia temporal determinada por norma).</li>
+                            <li><strong>Solicitud de Actualización:</strong> Cuando ocurren cambios sustanciales en el hogar. Por ejemplo: cambio de domicilio a otro distrito, nacimiento de un hijo, fallecimiento de un integrante o cuando un hijo mayor de edad se independiza y abandona el hogar.</li>
+                        </ul>
+                        <p>Y ahora venimos a destrozar los <strong>cuatro grandes mitos urbanos del Formato S100</strong> que la gente se cree por culpa de la desinformación en redes sociales y la viveza de los tramitadores. ¡Presten atención, mierda!</p>
+                        <p><strong>Mito Número 1:</strong> <em>&quot;El trámite del Formato S100 en la ULE tiene un costo o requiere pago de tasa municipal&quot;</em>. <strong>¡FALSO DE TODA FALSEDAD!</strong> Por ley (Ley 30435 y normativas del Ente Rector), la atención, recepción del Formato S100 y el empadronamiento en la ULE son <strong>100% GRATUITOS</strong>. Si un funcionario, empadronador o tramitador en la puerta del municipio te pide un sol, un plato de comida o una colaboración para la copias, ¡está cometiendo el delito de cobro indebido y concusión! Tienen que denunciarlo de inmediato ante el Órgano de Control Institucional (OCI) o la Fiscalía de Prevención del Delito.</p>
+                        <p><strong>Mito Número 2:</strong> <em>&quot;Si escondo a mi esposo o a mi hijo que trabaja en planilla formal y no lo pongo en el Formato S100, el sistema me va a dar Pobre Extremo&quot;</em>. <strong>¡TOTAL BRUTALIDAD Y ESTAFADERA!</strong> Eso se llama Falsedad Ideológica (Artículo 428 del Código Penal, con pena privativa de la libertad de hasta 6 años). Y no solo es un delito; es una estupidez técnica. ¿Por qué? Porque cuando la ULE sube la solicitud al sistema del OFIS, el motor de cotejo masivo cruza la dirección y los apellidos con la planilla electrónica T-Registro de la SUNAT y la RENIEC. Si el sistema detecta que ocultaste a un familiar con ingresos formales para engañar al Estado, la solicitud queda anulada de oficio, se te asigna la condición de No Pobre o se te abre un expediente de auditoría por fraude.</p>
+                        <p><strong>Mito Número 3:</strong> <em>&quot;Llenar el Formato S100 significa que el próximo mes la municipalidad me va a dar mi bono o mi pensión&quot;</em>. <strong>¡MENTIRA ABSOLUTA!</strong> Como dijimos en el Episodio 4, el Formato S100 no es una ficha de inscripción a un programa social; es solo la <strong>solicitud para ser evaluado y empadronado</strong>. El S100 da inicio al proceso. Luego la ULE tiene que ir a tu casa a aplicar la Ficha Socioeconómica Única (FSU), enviar los datos al OFIS, y el OFIS emitir la CSE. Recién con la CSE en mano, las entidades de los programas sociales verifican si cumples con sus requisitos categóricos y si tienen presupuesto para afiliarte.</p>
+                        <p><strong>Mito Número 4:</strong> <em>&quot;Puedo mandar a mi comadre o al dirigente del vaso de leche con mi DNI a firmar el Formato S100 por mí&quot;</em>. <strong>¡FALSO Y NEGLIGENTE!</strong> El Formato S100 exige la presencia del integrante mayor de edad del hogar o del informante calificado. La ULE no puede recibir solicitudes &quot;en bloque&quot; entregadas por dirigentes políticos o sociales. Eso prestaba a la manipulación clientelar en las campañas electorales. El trámite es directo, individualizado y transparente.</p>
+                        <p>Y hablemos del trabajo del operador de la ULE. Si el personal de la ULE recibe un Formato S100 y lo deja tirado dos semanas en un cajón sin digitarlo en el aplicativo informático SIGOF, está vulnerando el Texto Único de Procedimientos Administrativos (TUPA) y los plazos legales de atención al ciudadano. Las ULE tienen plazos estrictos para procesar las solicitudes y programar las visitas de campo para la FSU.</p>
+                        <p>¡Exijan sus derechos con conocimiento de la norma! El Formato S100 es la llave que abre el expediente socioeconómico de tu hogar. Llénalo con la verdad, exige tu constancia de trámite con la fecha de recepción de la ULE, y no le pagues un solo centavo a ningún miserable que intente lucrar con tu necesidad.</p>
+                        <p>La focalización social se respeta y se gestiona con integridad legal. En el próximo episodio, el Episodio 6, nos vamos a meter al barro: <strong>La Ficha Socioeconómica Única (FSU) en el terreno</strong>. Vamos a analizar cómo se llena en campo, la recolección de variables, la cartografía, el uso de tecnología y la anatomía del hogar.</p>
+                        <p>¡Revisen los requisitos del S100, lleven sus DNI vigentes, su recibo de luz y no se dejen engañar por nadie! ¡Nos vemos en el Episodio 6, carajo!</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="practica" id="practica">
+            <div class="contenedor">
+                <header class="practica-titulo">
+                    <span class="rotulo">Después de leer</span>
+                    <h2>Practica para recordar</h2>
+                    <p>Dos actividades breves para transformar la lectura en una acción concreta.</p>
+                </header>
+
+                <div class="practica-grid">
+                    <article class="actividad reto">
+                        <span class="actividad-tipo">Reto rápido · 5 minutos</span>
+                        <h3>Revisa una solicitud</h3>
+                        <p>Un hogar se mudó y declara que cambió su composición.</p>
+                        <ol>
+                            <li>Elige la modalidad y describe cómo registrarías la dirección y los integrantes.</li>
+                        </ol>
+                        <label for="respuesta-reto">¿Qué comprobarías antes de programar la visita?</label>
+                        <textarea id="respuesta-reto" rows="4" placeholder="Escribe una situación concreta..."></textarea>
+                    </article>
+
+                    <article class="actividad cuestionario">
+                        <span class="actividad-tipo">Cuestionario · 10 preguntas</span>
+                        <h3>Comprueba tu comprensión</h3>
+                        <form id="quiz-form">
+                            <fieldset data-respuesta="c">
+                                <legend>1. ¿Qué modalidad corresponde a un hogar recién constituido y sin empadronamiento previo?</legend>
+                                <label><input type="radio" name="pregunta-1" value="a"> Reevaluación, porque el hogar requiere una CSE vigente.</label>
+                                <label><input type="radio" name="pregunta-1" value="b"> Actualización, porque los integrantes antes vivían en otro hogar.</label>
+                                <label><input type="radio" name="pregunta-1" value="c"> Primera solicitud, porque el hogar inicia su registro.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="b">
+                                <legend>2. ¿Qué diferencia reevaluación de actualización en los ejemplos?</legend>
+                                <label><input type="radio" name="pregunta-2" value="a"> La reevaluación responde a una mudanza y la actualización al vencimiento.</label>
+                                <label><input type="radio" name="pregunta-2" value="b"> La reevaluación responde al vencimiento y la actualización a cambios del hogar.</label>
+                                <label><input type="radio" name="pregunta-2" value="c"> La reevaluación inicia el registro y la actualización sustituye la visita.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="a">
+                                <legend>3. ¿Qué dato permite relacionar la vivienda con el suministro eléctrico?</legend>
+                                <label><input type="radio" name="pregunta-3" value="a"> El código de suministro registrado a partir del recibo.</label>
+                                <label><input type="radio" name="pregunta-3" value="b"> El número de documento del jefe de hogar.</label>
+                                <label><input type="radio" name="pregunta-3" value="c"> La firma del funcionario que recibe el formato.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="c">
+                                <legend>4. ¿Qué criterio permite identificar integrantes del hogar?</legend>
+                                <label><input type="radio" name="pregunta-4" value="a"> Parentesco con el solicitante y proximidad al domicilio.</label>
+                                <label><input type="radio" name="pregunta-4" value="b"> Propiedad común del inmueble y coincidencia de apellidos.</label>
+                                <label><input type="radio" name="pregunta-4" value="c"> Residencia habitual y presupuesto de alimentación compartido.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="a">
+                                <legend>5. ¿Qué actuación corresponde ante la próxima expiración de la CSE?</legend>
+                                <label><input type="radio" name="pregunta-5" value="a"> Presentar una solicitud de reevaluación.</label>
+                                <label><input type="radio" name="pregunta-5" value="b"> Presentar una solicitud de primera clasificación.</label>
+                                <label><input type="radio" name="pregunta-5" value="c"> Presentar una actualización por cambio de domicilio.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="b">
+                                <legend>6. ¿Qué función cumple la referencia de ubicación?</legend>
+                                <label><input type="radio" name="pregunta-6" value="a"> Establece la categoría socioeconómica antes del procesamiento.</label>
+                                <label><input type="radio" name="pregunta-6" value="b"> Facilita localizar la vivienda para el trabajo de campo.</label>
+                                <label><input type="radio" name="pregunta-6" value="c"> Sustituye los documentos de identidad del hogar.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="b">
+                                <legend>7. ¿Qué caso permite considerar un informante calificado acreditado?</legend>
+                                <label><input type="radio" name="pregunta-7" value="a"> La preferencia del dirigente vecinal por presentar todas las solicitudes.</label>
+                                <label><input type="radio" name="pregunta-7" value="b"> Una situación excepcional de dependencia o incapacidad.</label>
+                                <label><input type="radio" name="pregunta-7" value="c"> La disponibilidad de un vecino que conoce la dirección.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="a">
+                                <legend>8. ¿Qué efecto tiene presentar el S100 dentro del proceso?</legend>
+                                <label><input type="radio" name="pregunta-8" value="a"> Inicia el trámite y aporta datos para procesarlo.</label>
+                                <label><input type="radio" name="pregunta-8" value="b"> Asigna de inmediato una clasificación al solicitante.</label>
+                                <label><input type="radio" name="pregunta-8" value="c"> Formaliza de inmediato la afiliación al programa.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="c">
+                                <legend>9. ¿Qué modalidad corresponde si nace un hijo y cambia la composición del hogar?</legend>
+                                <label><input type="radio" name="pregunta-9" value="a"> Reevaluación, porque todo nacimiento hace vencer la CSE.</label>
+                                <label><input type="radio" name="pregunta-9" value="b"> Primera solicitud, porque cada integrante genera un hogar.</label>
+                                <label><input type="radio" name="pregunta-9" value="c"> Actualización, porque se modifica la composición registrada.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="b">
+                                <legend>10. ¿Qué elementos documentan la recepción de la solicitud según la lectura?</legend>
+                                <label><input type="radio" name="pregunta-10" value="a"> Firma del programa y código de suministro del domicilio.</label>
+                                <label><input type="radio" name="pregunta-10" value="b"> Firma o huella del solicitante y firma y sello de quien recibe en la ULE.</label>
+                                <label><input type="radio" name="pregunta-10" value="c"> Firma de un vecino y constancia de afiliación del hogar.</label>
+                            </fieldset>
+
+                            <div class="quiz-acciones">
+                                <button type="submit">Comprobar respuestas</button>
+                                <button type="button" id="quiz-reiniciar">Intentar de nuevo</button>
+                                <p id="quiz-resultado" role="status" aria-live="polite"></p>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <nav class="barra-clases" aria-label="Navegación entre clases">
+            <a href="../../pension-65.html#curso-ofis" class="barra-volver"><span>←</span> Volver al curso</a>
+            <a href="4.html"><span>‹</span> Anterior</a>
+            <a href="6.html" class="barra-siguiente">Siguiente <span>›</span></a>
+        </nav>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <span>Gestión Pública</span>
+            <p>Aprender de la Gestión Pública</p>
+        </div>
+    </footer>
+
+    <script src="../../../../js/transcripcion.js"></script>
+    <script src="../../../../js/practica-general.js"></script>
+</body>
+</html>

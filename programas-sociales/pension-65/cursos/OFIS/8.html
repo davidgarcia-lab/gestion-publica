@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reconstruye las cinco etapas del algoritmo descrito en la lectura y distingue validación, reglas de exclusión, estimación de gasto y comparación por geodominio.">
+    <title>Clase 08 | OFIS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/clase.css">
+    <link rel="stylesheet" href="../../../../css/practica-general.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="contenedor navegacion">
+            <a class="marca" href="../../../../index.html">Gestión Pública</a>
+            <nav>
+                <a href="../../pension-65.html#curso-ofis">Plan de estudios</a>
+                <a class="inicio" href="../../../../index.html">Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="encabezado-clase">
+            <div class="contenedor">
+                <p class="ruta">Pensión 65 <span>/</span> OFIS <span>/</span> Clase 08</p>
+                <div class="encabezado-grid">
+                    <div>
+                        <h1>Algoritmos del bienestar (R.M. 069-2022-MIDIS): Los 5 pasos para filtrar la pobreza</h1>
+                        <p class="resumen">Reconstruye las cinco etapas del algoritmo descrito en la lectura y distingue validación, reglas de exclusión, estimación de gasto y comparación por geodominio.</p>
+                    </div>
+                    <a class="enlace-spotify" href="https://open.spotify.com/show/7G82hBMTKbiyPfySKntdIv?si=RSNzB2jdSIaJFllykC87CQ" target="_blank" rel="noopener noreferrer">
+                        <span>▶</span> Escuchar en Spotify
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="estudio">
+            <div class="contenedor estudio-grid">
+                <aside class="lateral">
+                    <section class="ideas-clave">
+                        <span class="rotulo">Ideas clave</span>
+                        <ul>
+                            <li>La validación detecta inconsistencias antes del cálculo.</li>
+                            <li>El cotejo administrativo puede activar una exclusión directa.</li>
+                            <li>En los demás casos, el gasto estimado se compara con umbrales del geodominio.</li>
+                        </ul>
+                    </section>
+                    <nav class="indice" aria-label="Contenido de la clase">
+                        <span>Contenido</span>
+                        <a href="#objetivos">Objetivos</a>
+                        <a href="#lectura">Lectura</a>
+                        <a href="#practica">Práctica</a>
+                    </nav>
+                </aside>
+
+                <article class="articulo">
+                    <section class="objetivos" id="objetivos">
+                        <span class="rotulo">Al terminar esta clase podrás</span>
+                        <ul>
+                            <li>Ordenar las etapas del procesamiento.</li>
+                            <li>Distinguir reglas directas de estimación indirecta.</li>
+                            <li>Interpretar las categorías resultantes según los umbrales de la lectura.</li>
+                        </ul>
+                    </section>
+                    <div class="texto-transcripcion lectura" id="lectura">
+                        <header class="lectura-titulo">
+                            <span class="rotulo">Lectura principal</span>
+                            <p>Validación, cotejo y comparación del gasto con umbrales territoriales.</p>
+                        </header>
+
+                        <p>¡Arrancamos el Episodio 8, carajo! Llegamos a la caja negra del sistema, al laboratorio secreto donde la política se apaga y la matemática toma el control. Hoy vamos a desarmar los algoritmos del bienestar bajo el marco de la Resolución Ministerial N.º 069-2022-MIDIS y las normativas vigentes que regulan la determinación de la Clasificación Socioeconómica (CSE). ¡Hoy les vamos a enseñar los 5 pasos con los que el Ente Rector filtra la pobreza en el Perú! Yo soy Carlos.</p>
+                        <p>Y yo soy Renzo. Y la verdad, señores, es una TOTAL BRUTALIDAD la ignorancia que existe sobre cómo se calcula la CSE. La gente cree que hay un funcionario sentado en un escritorio en Lima decidiendo a su antojo: <em>&quot;A este compadre le pongo Pobre Extremo y a este le pongo No Pobre&quot;</em>. ¡Mentira absoluta! El Ente Rector (OFIS) no usa corazonadas; usa modelos econométricos, matrices de imputación y algoritmos automatizados. Si a la máquina le metes datos limpios, te vota un resultado científico; si le metes basura, te vota basura.</p>
+                        <p>¡Exacto, Renzo! Vamos a desnudarlos paso por paso. Agárrense los pantalones, que aquí viene la verdadera arquitectura algorítmica del Estado Peruano:</p>
+                        <h2>Paso 1: Control de calidad, validación de consistencia y consistenciación de datos</h2>
+                        <p>Todo empieza cuando la ULE sube la Ficha Socioeconómica Única (FSU) al aplicativo informático. El primer filtro del motor informático del OFIS no es econométrico; es de <strong>consistencia lógica y validación de identidad</strong>. El sistema verifica en microsegundos si los DNI de todos los miembros existen en la base de la RENIEC, si las edades concuerdan con las fechas de nacimiento, si hay duplicidad de registros y si los códigos cartográficos de centro poblado y geodominio son válidos.</p>
+                        <p>¡Mucha atención! Si la FSU dice que un niño de 6 años es el &quot;Jefe de Hogar&quot;, o que una persona tiene 150 años de edad, o falta la coordenada GPS de la vivienda, el algoritmo no procesa la ficha: la <strong>rebotá de inmediato por inconsistencia grave</strong> y le exige a la ULE la subsanación en campo. El algoritmo se protege a sí mismo contra la manipulación y el error humano desde el segundo cero.</p>
+                        <h2>Paso 2: La regla de exclusión directa por cotejo administrativo masivo</h2>
+                        <p>¡Aquí caen miles de conchudos, carajo! Antes de aplicar cualquier fórmula de cálculo de ingresos o pobreza, el sistema ejecuta la <strong>evaluación por información administrativa de registros públicos y privados</strong>. El motor de búsqueda cruza el hogar con la SUNAT, la planilla electrónica T-Registro, la SBS, la SUNARP y EsSalud.</p>
+                        <p>¿Y qué busca este filtro? Aplica las <strong>reglas definitivas de No Pobreza</strong>. Si el sistema detecta que al menos un integrante del hogar:</p>
+                        <ol>
+                            <li>Percibe ingresos formales en planilla acumulados por encima del umbral legal de la Canasta Básica Familiar.</li>
+                            <li>Posee dos o más vehículos automotores registrados a su nombre en la SUNARP con una antigüedad menor a diez años.</li>
+                            <li>Tiene registradas múltiples propiedades inmuebles de alto valor comercial o predios de uso empresarial.</li>
+                            <li>Es titular de cuentas bancarias o depósitos a plazo con saldos financieros que superen los límites de vulnerabilidad.</li>
+                        </ol>
+                        <p>¡Tómala! En el instante en que la base de datos confirma cualquiera de estos gatilladores, el algoritmo detiene el proceso de cálculo econométrico y le asigna al hogar, por <strong>regla de exclusión directa</strong>, la Clasificación Socioeconómica de <strong>No Pobre (NOPO)</strong>. ¡Sin apelación pataleada en ventanilla, sin importar si la casa era de adobe o si el empadronador puso que no tenían televisión! La evidencia registral destruye la simulación de pobreza.</p>
+                        <h2>Paso 3: Construcción de la variable del Gasto Per Cápita Familiar del Hogar</h2>
+                        <p>Si el hogar supera el Paso 2 (es decir, no tiene bienes ni ingresos formales ostensibles que activen la exclusión directa), el algoritmo entra a la fase de estimación indirecta: el modelo del <strong>Gasto Per Cápita del Hogar</strong>. ¿Por qué se mide el gasto y no solo el ingreso en los países en desarrollo, Carlos?</p>
+                        <p>¡Porque en un país con más del 70% de informalidad laboral, la gente miente o no sabe cuánto gana al mes! El ingreso informal es volátil y subreportado. En cambio, el <strong>gasto en consumo</strong> (lo que la familia efectivamente come, viste, gasta en transporte, luz, agua, educación y vivienda) refleja con precisión quirúrgica el nivel de vida real del hogar. El algoritmo toma las variables capturadas en la FSU (características de la vivienda, activos duraderos, nivel educativo del jefe de hogar, ocupación, dependencia demográfica) y aplica un modelo de regresión econométrica para imputar el gasto per cápita mensual del hogar.</p>
+                        <h2>Paso 4: Ponderación por Geodominios y ajuste con las Líneas de Pobreza del INEI</h2>
+                        <p>¡Aquí entra la R.M. 069-2022-MIDIS en todo su esplendor! El gasto per cápita estimado en el Paso 3 no se compara contra una cifra única nacional. ¡Eso sería una locura! El valor de la vida y el costo de la Canasta Básica de Alimentos no es el mismo en San Isidro en Lima que en un distrito rural de la sierra de Huancavelica o en la selva de Satipo.</p>
+                        <p>El algoritmo ajusta el gasto per cápita según el <strong>geodominio estadístico</strong> al que pertenece la vivienda (Costa Urbana, Costa Rural, Sierra Urbana, Sierra Rural, Selva Urbana, Selva Rural, Lima Metropolitana/Callao). Luego, compara ese gasto estimado del hogar contra dos umbrales económicos oficiales fijados por el INEI:</p>
+                        <ul>
+                            <li><strong>La Línea de Pobreza Extrema (LPE):</strong> El costo mínimo monetario para cubrir una canasta básica de alimentos que garantice los requerimientos calóricos mínimos para sobrevivir.</li>
+                            <li><strong>La Línea de Pobreza Total (LPT):</strong> El costo mínimo para cubrir la canasta de alimentos MÁS los bienes y servicios no alimentarios esenciales (vivienda, vestimenta, transporte, salud, educación).</li>
+                        </ul>
+                        <h2>Paso 5: Asignación final y emisión de la Clasificación Socioeconómica (CSE)</h2>
+                        <p>Y el algoritmo concluye con una regla lógica matemática infalible. Compara el gasto per cápita (<var>G</var>) con los umbrales LPE y LPT del geodominio:</p>
+                        <ol>
+                            <li><strong>Si <var>G &lt; LPE</var>:</strong> El gasto del hogar ni siquiera alcanza para comer. Asignación automática: <strong>Pobre Extremo (POEX)</strong>.</li>
+                            <li><strong>Si <var>LPE ≤ G ≤ LPT</var>:</strong> El hogar cubre la comida pero no llega a cubrir la canasta básica total. Asignación automática: <strong>Pobre No Extremo (POBRE)</strong>.</li>
+                            <li><strong>Si <var>G &gt; LPT</var>:</strong> El gasto del hogar supera la línea de pobreza de su región. Asignación automática: <strong>No Pobre (NOPO)</strong>.</li>
+                        </ol>
+                        <p>¡Eso es todo, mierda! 5 pasos ejecutados por un motor informático en milisegundos. Sin favoritismo de la alcaldía, sin coimas al empadronador y sin discrecionalidad política. La R.M. 069-2022-MIDIS garantiza que la matemática sea igual para todos los ciudadanos en todo el territorio nacional.</p>
+                        <p>Pero ojo con el principio de <em>&quot;Garbage In, Garbage Out&quot;</em> (Entra Basura, Sale Basura). Si el empadronador de la ULE en el Paso 1 metió mal el código de geodominio, o si el solicitante mintió en la FSU sobre los materiales de la vivienda y la ULE no lo verificó en campo, el insumo que entra al Paso 3 estará contaminado y el Paso 5 botará una CSE distorsionada.</p>
+                        <p>¡Por eso la responsabilidad territorial de las ULE es gigantesca! El algoritmo es perfecto en su lógica matemática, pero depende de la verdad que los operadores de campo recogen en la calle.</p>
+                        <p>En el Episodio 9 nos metemos con el dolor de cabeza de los usuarios y gestores: <strong>Cotejo masivo, mitos urbanos de la CSE y la reevaluación en 180 días</strong>. Vamos a ver qué pasa cuando la CSE vence y cómo se manejan las impugnaciones.</p>
+                        <p>¡Estudien la R.M. 069-2022-MIDIS, entiendan los 5 pasos del algoritmo y exijan rigor técnico en sus municipalidades! ¡Nos vemos en el Episodio 9, carajo!</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="practica" id="practica">
+            <div class="contenedor">
+                <header class="practica-titulo">
+                    <span class="rotulo">Después de leer</span>
+                    <h2>Practica para recordar</h2>
+                    <p>Dos actividades breves para transformar la lectura en una acción concreta.</p>
+                </header>
+
+                <div class="practica-grid">
+                    <article class="actividad reto">
+                        <span class="actividad-tipo">Reto rápido · 5 minutos</span>
+                        <h3>Sigue la ruta de dos fichas</h3>
+                        <p>Una ficha tiene un dato de identidad inconsistente y otra supera el control inicial, pero activa una exclusión directa.</p>
+                        <ol>
+                            <li>Identifica dónde se detiene cada ruta y qué resultado corresponde según la lectura.</li>
+                        </ol>
+                        <label for="respuesta-reto">¿Qué control priorizarías al revisar lotes de fichas?</label>
+                        <textarea id="respuesta-reto" rows="4" placeholder="Escribe una situación concreta..."></textarea>
+                    </article>
+
+                    <article class="actividad cuestionario">
+                        <span class="actividad-tipo">Cuestionario · 10 preguntas</span>
+                        <h3>Comprueba tu comprensión</h3>
+                        <form id="quiz-form">
+                            <fieldset data-respuesta="c">
+                                <legend>1. ¿Qué ocurre con una inconsistencia grave de identidad en el primer paso?</legend>
+                                <label><input type="radio" name="pregunta-1" value="a"> Se estima el gasto y luego se contrasta la identidad.</label>
+                                <label><input type="radio" name="pregunta-1" value="b"> Se aplica directamente la categoría No Pobre por el error de registro.</label>
+                                <label><input type="radio" name="pregunta-1" value="c"> Se devuelve la ficha para subsanación antes de estimar el gasto.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="b">
+                                <legend>2. ¿Qué caracteriza a la exclusión directa descrita?</legend>
+                                <label><input type="radio" name="pregunta-2" value="a"> La comparación del gasto con la LPT activa No Pobre antes del cotejo.</label>
+                                <label><input type="radio" name="pregunta-2" value="b"> Un hallazgo administrativo activa No Pobre sin pasar a estimación de gasto.</label>
+                                <label><input type="radio" name="pregunta-2" value="c"> La sola falta de una coordenada activa No Pobre al validar la ficha.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="a">
+                                <legend>3. ¿Por qué se usa el gasto como aproximación en la lectura?</legend>
+                                <label><input type="radio" name="pregunta-3" value="a"> Porque el ingreso informal puede ser volátil o estar subdeclarado.</label>
+                                <label><input type="radio" name="pregunta-3" value="b"> Porque toda información de consumo figura en registros administrativos.</label>
+                                <label><input type="radio" name="pregunta-3" value="c"> Porque el gasto permite prescindir de las variables de vivienda.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="c">
+                                <legend>4. ¿Qué aporta el geodominio al comparar el gasto?</legend>
+                                <label><input type="radio" name="pregunta-4" value="a"> Una CSE única para todos los hogares de cada territorio.</label>
+                                <label><input type="radio" name="pregunta-4" value="b"> Una verificación de identidad posterior a la clasificación.</label>
+                                <label><input type="radio" name="pregunta-4" value="c"> Umbrales que reflejan diferencias territoriales en costos.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="a">
+                                <legend>5. ¿Qué distingue la LPT de la LPE?</legend>
+                                <label><input type="radio" name="pregunta-5" value="a"> La LPT incorpora gastos esenciales no alimentarios además de alimentos.</label>
+                                <label><input type="radio" name="pregunta-5" value="b"> La LPT cubre únicamente alimentos y la LPE añade vivienda y salud.</label>
+                                <label><input type="radio" name="pregunta-5" value="c"> Ambas cubren los mismos rubros y varían por tamaño del hogar.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="b">
+                                <legend>6. ¿Qué resultado corresponde a un gasto por debajo de la LPE en el esquema?</legend>
+                                <label><input type="radio" name="pregunta-6" value="a"> Pobre No Extremo, porque queda por debajo de la LPT.</label>
+                                <label><input type="radio" name="pregunta-6" value="b"> Pobre Extremo, porque queda por debajo del umbral alimentario.</label>
+                                <label><input type="radio" name="pregunta-6" value="c"> No Pobre, porque no se activó una exclusión registral.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="b">
+                                <legend>7. ¿Qué condición habilita la estimación indirecta tras el cotejo?</legend>
+                                <label><input type="radio" name="pregunta-7" value="a"> La existencia de un hallazgo que cierre la ruta econométrica.</label>
+                                <label><input type="radio" name="pregunta-7" value="b"> La ausencia de un hallazgo que active exclusión directa.</label>
+                                <label><input type="radio" name="pregunta-7" value="c"> La emisión previa de una CSE basada solo en el geodominio.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="a">
+                                <legend>8. ¿Qué aporta la FSU al cálculo indirecto?</legend>
+                                <label><input type="radio" name="pregunta-8" value="a"> Variables observadas que sirven para estimar el gasto per cápita.</label>
+                                <label><input type="radio" name="pregunta-8" value="b"> Un cálculo definitivo del gasto a partir del DNI del jefe de hogar.</label>
+                                <label><input type="radio" name="pregunta-8" value="c"> El resultado del cotejo administrativo con todas las fuentes externas.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="c">
+                                <legend>9. ¿Por qué un mismo gasto puede tener distinta lectura en dos zonas?</legend>
+                                <label><input type="radio" name="pregunta-9" value="a"> Porque el registro de identidad cambia con la zona evaluada.</label>
+                                <label><input type="radio" name="pregunta-9" value="b"> Porque cada ULE puede emitir una CSE distinta sin umbrales.</label>
+                                <label><input type="radio" name="pregunta-9" value="c"> Porque los umbrales pertinentes dependen del geodominio.</label>
+                            </fieldset>
+
+                            <fieldset data-respuesta="b">
+                                <legend>10. ¿Qué distingue el control de consistencia del cotejo de exclusión?</legend>
+                                <label><input type="radio" name="pregunta-10" value="a"> El primero estima el gasto y el segundo corrige los códigos cartográficos.</label>
+                                <label><input type="radio" name="pregunta-10" value="b"> El primero depura errores de registro y el segundo contrasta señales económicas.</label>
+                                <label><input type="radio" name="pregunta-10" value="c"> El primero fija la línea territorial y el segundo registra la composición.</label>
+                            </fieldset>
+
+                            <div class="quiz-acciones">
+                                <button type="submit">Comprobar respuestas</button>
+                                <button type="button" id="quiz-reiniciar">Intentar de nuevo</button>
+                                <p id="quiz-resultado" role="status" aria-live="polite"></p>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <nav class="barra-clases" aria-label="Navegación entre clases">
+            <a href="../../pension-65.html#curso-ofis" class="barra-volver"><span>←</span> Volver al curso</a>
+            <a href="7.html"><span>‹</span> Anterior</a>
+            <a href="9.html" class="barra-siguiente">Siguiente <span>›</span></a>
+        </nav>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <span>Gestión Pública</span>
+            <p>Aprender de la Gestión Pública</p>
+        </div>
+    </footer>
+
+    <script src="../../../../js/transcripcion.js"></script>
+    <script src="../../../../js/practica-general.js"></script>
+</body>
+</html>
