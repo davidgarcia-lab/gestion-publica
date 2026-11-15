@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
         cabecera.setAttribute('role', 'button');
         cabecera.setAttribute('tabindex', '0');
         cabecera.setAttribute('aria-controls', listaId);
-        cabecera.setAttribute('aria-expanded', 'false');
-        modulo.classList.remove('modulo-abierto');
+        const abrirPorEnlace = Boolean(modulo.id) && window.location.hash === `#${modulo.id}`;
+        cabecera.setAttribute('aria-expanded', String(abrirPorEnlace));
+        modulo.classList.toggle('modulo-abierto', abrirPorEnlace);
 
         const alternarBloque = () => {
             const estabaAbierto = modulo.classList.contains('modulo-abierto');

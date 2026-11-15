@@ -3,100 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rutas prácticas para aprender gestión, liderazgo, comunicación y crecimiento personal.">
-    <title>Gestión Pública</title>
+    <meta name="description" content="Cursos de gestión pública, gestión de desastres, programas sociales y habilidades directivas.">
+    <title>Gestión Pública | Rutas de aprendizaje</title>
+    <script src="./js/tema-portada.js"></script>
     <link rel="stylesheet" href="./css/styles_0.css">
 </head>
-
 <body>
     <header class="encabezado">
         <div class="contenedor barra-navegacion">
             <a class="marca" href="index.html">Gestión Pública</a>
-            <a class="boton-inicio" href="index.html">Inicio</a>
+            <div class="control-tema" id="control-tema" hidden>
+                <span aria-hidden="true">Día</span>
+                <button class="interruptor" id="interruptor-tema" type="button" role="switch" aria-label="Modo noche" aria-checked="false"></button>
+                <span aria-hidden="true">Noche</span>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="portada contenedor">
+        <section class="portada contenedor" aria-labelledby="titulo-portada">
             <div class="mensaje-principal">
-                <span class="etiqueta">Aprendizaje para avanzar</span>
-
-                <h1>
-                    Aprende sobre gestión pública
-                    <span>simple, práctica y ordenada.</span>
-                </h1>
-
-                <p>
-                    Desarrolla habilidades útiles para comunicar, decidir,
-                    resolver problemas y crear valor en tu vida profesional.
-                </p>
-
-                <a class="boton-principal" href="#rutas">Explorar cursos</a>
+                <h1 id="titulo-portada">Aprende sobre <span>gestión pública</span></h1>
+                <p>Encuentra cursos para planificar, gestionar programas sociales, responder a emergencias y dirigir equipos.</p>
+                <a class="boton-principal" href="#rutas">Explorar cursos <span aria-hidden="true">↓</span></a>
             </div>
-
-            <div class="datos" aria-label="Datos de la plataforma">
-                <article class="dato">
-                    <strong>500+</strong>
-                    <h2>Clases disponibles</h2>
-                    <p>Contenido práctico y organizado para avanzar paso a paso.</p>
-                </article>
-
-                <article class="dato">
-                    <strong>+10</strong>
+            <aside class="portada-resumen" aria-label="Oferta de aprendizaje">
+                <div class="dato">
+                    <strong>4</strong>
                     <h2>Rutas de aprendizaje</h2>
-                    <p>Temas conectados para desarrollar habilidades reales.</p>
-                </article>
-
-                <article class="dato">
-                    <strong>24/7</strong>
-                    <h2>Acceso digital</h2>
-                    <p>Aprende cuando quieras y desde cualquier dispositivo.</p>
-                </article>
-            </div>
+                    <p>Cursos organizados por área de estudio.</p>
+                </div>
+                <a class="dato dato-enlace" href="habilidades-directivas/plan-de-estudios.html">
+                    <strong>60 clases</strong>
+                    <h2>Diploma de Habilidades Directivas</h2>
+                    <p>Ver plan de estudios <span aria-hidden="true">↗</span></p>
+                </a>
+                <div class="dato">
+                    <h2>Estudia a tu ritmo</h2>
+                    <p>Consulta las lecturas y, según la clase, escucha el audio o resuelve la práctica.</p>
+                </div>
+            </aside>
         </section>
 
-        <section class="rutas contenedor" id="rutas">
+        <section class="rutas contenedor" id="rutas" aria-labelledby="titulo-rutas">
             <div class="titulo-seccion">
-                <span>Explora por temas</span>
-                <h2>Rutas de aprendizaje</h2>
-                <p>Selecciona una ruta para conocer sus cursos y clases.</p>
+                <h2 id="titulo-rutas">Rutas de aprendizaje</h2>
+                <p>Elige un tema para ver sus programas y clases.</p>
             </div>
-
             <div class="rejilla-rutas">
-
-                
-                <a class="ruta" href="gestion-publica.html"><span>1</span><h3>Gestión Pública</h3><b>→</b></a>
-                
+                <a class="ruta" href="gestion-publica.html">
+                    <h3>Gestión Pública</h3>
+                    <p>Planificación, inversión pública y gestión municipal.</p>
+                    <span class="ruta-flecha" aria-hidden="true">↗</span>
+                </a>
+                <a class="ruta" href="gestion-desastres.html">
+                    <h3>Gestión de Desastres</h3>
+                    <p>Evaluación de daños y análisis de necesidades ante emergencias.</p>
+                    <span class="ruta-flecha" aria-hidden="true">↗</span>
+                </a>
+                <a class="ruta" href="programas-sociales.html">
+                    <h3>Programas Sociales</h3>
+                    <p>Pensión 65, focalización social y atención a personas mayores.</p>
+                    <span class="ruta-flecha" aria-hidden="true">↗</span>
+                </a>
+                <a class="ruta" href="habilidades-directivas.html">
+                    <h3>Habilidades Directivas</h3>
+                    <p>Liderazgo, negociación y toma de decisiones en crisis.</p>
+                    <span class="ruta-flecha" aria-hidden="true">↗</span>
+                </a>
             </div>
-
-            <div class="rejilla-rutas">
-
-                
-                <a class="ruta" href="gestion-desastres.html"><span>2</span><h3>Gestión de Desastres</h3><b>→</b></a>
-                
-            </div>
-
-            <div class="rejilla-rutas">
-
-                
-                <a class="ruta" href="programas-sociales.html"><span>3</span><h3>Programas Sociales</h3><b>→</b></a>
-                
-            </div>
-
-            <!-- 
-            <div class="rejilla-rutas">
-
-                
-                <a class="ruta" href="contrataciones-publicas.html"><span>1</span><h3>Contrataciones Públicas</h3><b>→</b></a>
-                
-            </div>
-            -->
-
         </section>
     </main>
 
-    <footer>
-        <div class="contenedor">Gestión Pública · Aprende, aplica y avanza.</div>
+    <footer class="pie">
+        <div class="contenedor">Gestión Pública</div>
     </footer>
 </body>
 </html>
